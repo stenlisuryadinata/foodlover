@@ -1,7 +1,6 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
-//   content: ["./src/**/*.{html,js}"],
-  content: ["./src/**/*.{html,js}"],
+  purge: ["./dist/**/*.html", "./dist/**/*.js"],
+  darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
       colors: {
@@ -15,10 +14,12 @@ module.exports = {
       fontFamily: {
         body: ['Nunito']
       }
-
-
-
+    },
+  },
+  variants: {
+    extend: {
+      transform: ["hover", "focus"],
     },
   },
   plugins: [],
-}
+};
